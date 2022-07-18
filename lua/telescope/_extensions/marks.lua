@@ -27,15 +27,13 @@ local generate_new_finder = function()
             local displayer = entry_display.create({
                 separator = " - ",
                 items = {
-                    { width = 2 },
-                    { width = 50 },
+                    { width = 120 },
                     { remaining = true },
                 },
             })
             local make_display = function()
                 return displayer({
-                    tostring(entry.index),
-                    line,
+                    entry.filename,
                 })
             end
             return {
